@@ -1,58 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap");
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-font-size: 62.5%;
-}
-
-header{
-background-image: url("../images/hero.jpg");
-background-size: cover;
-height: 100vh;
-padding: 25rem 9.2rem;
-display: flex;
-flex-direction: column;
-background-blend-mode: overlay;
-background-color: rgba(0, 0, 0, 0.5);
-
+html {
+  font-size: 62.5%;
 }
 
-h1{
-font-size: 5rem;
-font-weight: 900;
-color: rgb(255, 255, 255);
-font-family: 'Poppins';
-text-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
+header {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 25rem 9.2rem;
+  display: flex;
+  flex-direction: column;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins";
+  text-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
 }
 
 span {
-font-family: 'Montserrat';
-font-size: 4rem;
-color:rgb(255, 255, 255);
+  font-family: "Montserrat";
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
 }
 
-section{
-display: flex;
-flex-direction: column;
-padding: 10rem;
+section-presentation {
+  display: flex;
+  padding: 10rem;
 }
 
-img{
-width: 30%;
+img {
+  width: 30%;
 }
 
-
-h2{
-font-size: 3.2rem;
-font-weight: 900;
-margin-top: 2rem;
+h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-top: 2rem;
 }
 
-a{
+a {
   display: block; /* adicionar esta linha */
   padding: 1.5rem 3.5rem;
   margin-top: 2rem;
@@ -66,9 +63,9 @@ a{
   align-items: center;
 }
 
-a:hover{
-transform: translateY(-0.2rem);
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+a:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .button {
@@ -83,4 +80,42 @@ box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+
+#section-projects{
+  background-color: #212121;
+}
+
+#section-projects ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+}
+
+#section-projects li{
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-image img{
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .8s, bottom .8s;
+}
+
+#section-projects li:hover .card-info{
+  opacity: 1;
+  bottom: 35%;
 }
